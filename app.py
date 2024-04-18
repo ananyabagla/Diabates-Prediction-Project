@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-import sklearn
+
 classifier = pickle.load(open('Model.sav' , 'rb'))
 
 def diab_pred(input_data):
