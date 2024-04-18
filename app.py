@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 
-classifier = pickle.load(open('Model.sav' , 'rb'))
+classifier = pickle.load(open('Model.pkl' , 'rb'))
 
 def diab_pred(input_data):
     input_data_as_nparray = np.asarray(input_data)
