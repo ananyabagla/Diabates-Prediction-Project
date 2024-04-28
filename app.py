@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 from sklearn.preprocessing import StandardScaler
 Scaler = StandardScaler()
-classifier = pickle.load(open('E:\Desktop\Diabates_predict\Model.sav' , 'rb'))
+classifier = pickle.load(open('Model_log.pkl' , 'rb'))
 
 def diab_pred(input_data):
     input_data_as_nparray = np.asarray(input_data)
