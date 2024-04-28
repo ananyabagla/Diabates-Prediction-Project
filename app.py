@@ -2,17 +2,16 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-from sklearn.preprocessing import StandardScaler
-Scaler = StandardScaler()
+
 classifier = pickle.load(open('Model_log.pkl' , 'rb'))
 
 def diab_pred(input_data):
     input_data_as_nparray = np.asarray(input_data)
     input_data_reshaped = input_data_as_nparray.reshape(1,-1)
-    input_data_scaled = Scaler.fit_transform(input_data_reshaped)
+    
 
 
-    pred = classifier.predict(input_data_scaled)
+    pred = classifier.predict(input_data_reshaped)
     print(pred)
     if (pred[0] == 0):
         return " You dont have diabates"
